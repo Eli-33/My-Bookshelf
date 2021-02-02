@@ -7,7 +7,7 @@ class ResultListItem extends Component {
         mounted: false,
         bgColor: "",
         color: "",
-        text: "Save"
+        text: "Wanna Read"
     }
     
     componentDidMount = () => {
@@ -18,7 +18,7 @@ class ResultListItem extends Component {
     }
 
     getStyle = () => {
-        if (this.state.text === "Save") {
+        if (this.state.text === "Wanna Read") {
             this.setState({
                 bgColor: "#00E000",
                 color: "white",
@@ -37,7 +37,7 @@ class ResultListItem extends Component {
 
 
     onClickFunc = () => {
-        this.props.saveGoogleBook(this.props)//.bind(this, this.props);
+        this.props.WantToRead(this.props)//.bind(this, this.props);
         this.getStyle();
     }
 
@@ -80,7 +80,7 @@ class ResultListItem extends Component {
                         <p style={{fontStyle: "italic"}}>Author(s): {this.props.authors}</p>
                         <a href={this.props.link} target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{marginRight: "6px"}}>View Book</a>
                         <button onClick={this.onClickFunc} style={{ backgroundColor: this.state.bgColor, color: this.state.color }} className="btn">{this.state.text}</button>
-                    </div>
+                   </div>
                 </div>
             </div>
         )

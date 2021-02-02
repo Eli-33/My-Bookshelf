@@ -1,15 +1,6 @@
 const db = require("../models");
 
 module.exports = {
-
-  findOneUser: function (req,res) {
-    var decoded = jwt.verify(req.headers['authorization'], process.env.SECRET_KEY)
-    db.User
-    .findOne({_id:decoded._id})
-    .then(dbModel => res.json(dbModel))
-    .catch(err => res.status(422).json(err));
-    },
-
     findAll: function(req, res) {
        console.log("FINDALL")
       db.GoogleBooks
@@ -25,6 +16,7 @@ module.exports = {
         .catch(err => res.status(422).json(err));
     },
     save: function(req, res) {
+      console.log('SAVE METHOD REQ BODY: ', req.body)
       db.GoogleBooks
         .create(req.body)
         .then(dbModel => res.json(dbModel))
@@ -41,7 +33,7 @@ module.exports = {
     },
     updatestatus: function(req, res) {
       db.GoogleBooks
-        .findOne({id: req.params.id})
+        .findOneAndUpdate({id: req.params.id})
         .then(dbModel => dbModel.status = (req.status))
         .catch(err => res.status(422).json(err));
     },

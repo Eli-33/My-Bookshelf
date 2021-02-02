@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-const user =require('./User')
 
 const bookSchema = new Schema({
     id: {type: String, require: true},
@@ -10,7 +9,7 @@ const bookSchema = new Schema({
     image: { type: String, unique: true, dropDups: true},
     link: { type: String, required: true},
     status: {type: String,required: true},
-    user: user._id
+    userId: { type: Schema.Types.ObjectId, ref: 'users' }
 });
 
 const GoogleBooks = mongoose.model("GoogleBooks", bookSchema);
