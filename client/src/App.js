@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-// import {StylesProvider,ThemeProvider,} from "@material-ui/core/styles";
 import Navbar from "./components/Navbar/Navbar";
 import Landing from "./components/pages/Landing/Landing";
 import Register from "./components/Register/register";
@@ -8,9 +7,6 @@ import Login from "./components/Login/login";
 import Dashboard from "./components/pages/Dashboard/Dashboard";
 import Other from "./components/pages/Other/Other";
 import Profile from "./components/Profile/profile";
-
-// import "~slick-carousel/slick/slick.css"; 
-// import "~slick-carousel/slick/slick-theme.css";
 
 import "./App.css";
 
@@ -21,8 +17,7 @@ import Auth from './Auth';
 class App extends Component {
     render() {
         return (
-            // <ThemeProvider>
-            //     <StylesProvider>
+          
 
                 <Router>
                     <div className="container-fluid pl-0 pr-0 m-0">
@@ -38,9 +33,7 @@ class App extends Component {
                         </div>
                     </div>
                 </Router>
-
-            //   </StylesProvider>
-            // </ThemeProvider>    
+   
         );
     }
 }

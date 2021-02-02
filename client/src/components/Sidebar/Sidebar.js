@@ -12,7 +12,7 @@ function Sidebar() {
                                         <div className="sidebar-brand-icon rotate-n-15">
                                                 <i className="far fa-user-circle" />
                                         </div>
-                                        <div className="sidebar-brand-text mx-3">Lost-In-The-Books</div>
+                                        <div></div>
                                 </Link>
 
                                 {/* Divider */}
@@ -32,7 +32,8 @@ function Sidebar() {
                                 <Item active={''}
                                         href={"/profile"}
                                         icon={<i className="fas fa-user-alt" />}
-                                        text={<span>Profile</span>} />
+                                        text={<span>Profile</span>}
+                                 />
 
                                 {/* Divider */}
                                 <hr className="sidebar-divider d-none d-md-block" />
@@ -42,7 +43,7 @@ function Sidebar() {
                                 <Item active={''}
                                         href={"/other"}
                                         icon={<i className="fas fa-calendar-week" />}
-                                        text={<span>Your Bookshelf</span>} />
+                                        text={<span>My Bookshelf</span>} />
 
                                 {/* Divider */}
                                 <hr className="sidebar-divider d-none d-md-block" />

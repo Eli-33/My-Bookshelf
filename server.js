@@ -60,6 +60,8 @@ app.use((req, res, next) => {
 
 
 // Start the API server
+console.log ("PORT out:", PORT)
 app.listen(PORT, function () {
+   console.log("PORT inside:", PORT)
     console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });

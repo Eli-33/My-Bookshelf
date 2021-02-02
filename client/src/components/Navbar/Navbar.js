@@ -1,23 +1,10 @@
 import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
 import "./style.css";
-// import {IconButton} from "@material-ui/core";
-// import MenuIcon from "@material-ui/icons/Menu";
-// import React, { useState } from "react";
-// import SideDrawer from "./SideDrawer";
-
-
-
-//  function Header() {
-//         const [drawerOpen, setDrawerOpen] = useState(false);
-      
-//         const toggleDrawer = (value) => {
-//           setDrawerOpen(value);
-//         };
+import logo from '../assets/images/logo3.png'
 
 class Navbar extends Component {
    
-
     logOut(e) {
         e.preventDefault();
         localStorage.removeItem('usertoken');
@@ -59,27 +46,20 @@ class Navbar extends Component {
                         <div>Logout</div>
                     </button>
                 </li>
-                {/* <IconButton
-          aria-label="Menu"
-          color="inherit"
-          onClick={() => toggleDrawer(true)}
-        > */}
-          {/* <MenuIcon /> */}
-        {/* </IconButton>
-        <SideDrawer open={drawerOpen} onClose={toggleDrawer} /> */}
             </ul>
-            
-  
 
         )
         return (
-            <nav className='navbar navbar-expand-lg'>
+            <nav className='navbar navbar-expand-md'>
+                 <img src={logo} alt="LOGO"/>
                 <div className='collapse navbar-collapse d-flex justify-content-end' id='navbar1'>
                     {localStorage.usertoken ? userLink : loginRegLink}
                 </div>
             </nav>
         )
     }
+
+
 }
 
 export default withRouter(Navbar);

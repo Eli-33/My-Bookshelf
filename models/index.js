@@ -1,4 +1,7 @@
+const User = require("./User");
+
 module.exports = {
-    GoogleBooks: require("./book")
+    GoogleBooks: require("./book"),
+    User:require('./User')
   };
   

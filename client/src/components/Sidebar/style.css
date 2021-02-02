@@ -3,9 +3,10 @@ aside
     background-color:  rgb(253, 246, 213);
     position: absolute;
     height: 100%;
-    top: 50px;
+    width: 120px;
+    top: 0px;
     left: 0px;
-    border: 1px solid rgb(199, 66, 61);
+    border: 1px solid rgb(194, 161, 160);
 }
 
 .sidebar {
@@ -16,3 +17,4 @@ aside
         color: #000000 !important;
         text-align: center;
     }
+

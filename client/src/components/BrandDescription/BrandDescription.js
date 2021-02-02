@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 
-
 class BrandDescription extends Component {
     render() {
         return (

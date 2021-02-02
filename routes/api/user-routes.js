@@ -15,7 +15,7 @@ const User = require("../../models/User");
 router.use(cors())
 process.env.SECRET_KEY = 'secret';
 
-router.post('/api/register', (req, res) => {
+router.post('/register', (req, res) => {
     // Form validation
     const { errors, isValid } = validateRegisterInput(req.body);
 
@@ -56,7 +56,7 @@ router.post('/api/register', (req, res) => {
     })
 })
 
-router.post('/api/login', (req, res) => {
+router.post('/login', (req, res) => {
     User.findOne({
         email: req.body.email
     })
@@ -88,7 +88,7 @@ router.post('/api/login', (req, res) => {
         })
 })
 
-router.get('/api/profile', (req, res) => {
+router.get('/profile', (req, res) => {
     var decoded = jwt.verify(req.headers['authorization'], process.env.SECRET_KEY)
     User.findOne({
         _id: decoded._id
@@ -106,7 +106,7 @@ router.get('/api/profile', (req, res) => {
         })
 })
 
-router.get('/api/displayusers', (req, res) => {
+router.get('/displayusers', (req, res) => {
     User.find()
         .then(response => {
             if (response) {
