@@ -1,10 +1,15 @@
 const db = require("../models");
+const jwt = require("jsonwebtoken");
+const { Types } = require("mongoose");
 
 module.exports = {
-    findAll: function(req, res) {
-       console.log("FINDALL")
+    findAll: function (req, res) {
+        var decoded = jwt.verify(req.headers['authorization'], process.env.SECRET_KEY)
+       console.log("FINDALL for:", decoded)
       db.GoogleBooks
-        .find(req.query)
+        .find({
+            userId: new Types.ObjectId(decoded._id)
+        }).populate('users')
         .sort({ date: -1 })
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err));

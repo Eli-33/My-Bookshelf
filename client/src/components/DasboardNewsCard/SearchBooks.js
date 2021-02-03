@@ -61,7 +61,6 @@ WantToRead = currentBook => {
   .then(res => console.log("Successful POST to DB!", res))
   .catch(err => console.log("this is the error", err));
 }
-
 render() {
         return (
          <> 

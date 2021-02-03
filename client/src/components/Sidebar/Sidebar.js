@@ -1,7 +1,34 @@
 import React from 'react';
+// import { Drawer, List, ListItem } from "@material-ui/core";
 import { Link } from 'react-router-dom';
 import Item from './Item';
 import "./style.css"
+
+// function Sidebar(props) {
+//         const { open, onClose } = props;
+//         return (
+//           <Drawer anchor="left" open={open} onClose={() => onClose(false)}>
+//             <List component="nav">
+//               <ListItem button onClick={() => console.log("Featured")}>
+//                 زمان باقیمانده تا شروع
+//               </ListItem>
+//               <ListItem button onClick={() => console.log("Venue NFO")}>
+//                 توضیحات کنسرت
+//               </ListItem>
+//               <ListItem button onClick={() => console.log("Highlights")}>
+//                 ویژه ها
+//               </ListItem>
+//               <ListItem button onClick={() => console.log("Pricing")}>
+//                 قیمت
+//               </ListItem>
+//               <ListItem button onClick={() => console.log("Location")}>
+//                 آدرس
+//               </ListItem>
+//             </List>
+//           </Drawer>
+//         );
+//       }
+
 
 function Sidebar() {
         return (
