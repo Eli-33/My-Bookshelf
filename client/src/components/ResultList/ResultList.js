@@ -17,6 +17,8 @@ class ResultList extends Component {
             image={book.volumeInfo.imageLinks ? book.volumeInfo.imageLinks.thumbnail : "https://previews.123rf.com/images/pavelstasevich/pavelstasevich1811/pavelstasevich181101065/112815953-no-image-available-icon-flat-vector.jpg"}
             description={book.volumeInfo.description}
             WantToRead={this.props.WantToRead}
+            CurrentlyReading={this.props.CurrentlyReading}
+            Read={this.props.Read}
             />
         ))
         )
