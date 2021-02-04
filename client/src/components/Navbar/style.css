@@ -1,14 +1,14 @@
 .navbar {
-    background-color: rgb(253, 246, 213);
+    background-color: rgb(46, 187, 180);
 }
 
 .btn {
-    background-color:  rgb(199, 66, 61) !important;
+    background-color:  rgba(39, 122, 104, 0.521) !important;
     color: #ececec !important;
 }
 
 img{
-    width: 120px;
+    width: 70px;
     
 }
 
@@ -27,7 +27,7 @@ img{
 } */
 
 .nav-link{
-    color: #000000 !important;
+    color: #743764 !important;
     text-align: center;
 }
 

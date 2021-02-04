@@ -1,20 +1,19 @@
 aside
 {
-    background-color:  rgb(253, 246, 213);
+    background-color:   rgb(46, 187, 180);
     position: absolute;
     height: 100%;
-    width: 130px;
-    top: 138px;
-    left: 5px;
-    border: 1px solid rgb(194, 161, 160);
+    width: 150px;
+    top: 87px;
+    left: 1px;
+    border: 1px solid rgb(251, 255, 2);
 }
 
 .sidebar {
-    background-color: rgb(253, 246, 213);
+    background-color:  rgb(46, 187, 180);
 }
 
 .sidebar-brand-text{
-        color: #000000 !important;
+        color: #f5f5f0 !important;
         text-align: center;
     }
-

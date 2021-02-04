@@ -1,9 +1,9 @@
 import React from "react";
 import Slider from "react-slick";
-
-import slide_one from "../assets/images/book.jpg";
-import slide_two from "../assets/images/bookstock.jpg";
-import slide_three from "../assets/images/images.jpg";
+import "./style.css";
+import slide_one from "../../images/Creative_Wallpaper_Stack_of_books_on_the_bench_082401_.jpg";
+import slide_two from "../../images/book-background-thumbnail.jpg";
+import slide_three from "../../images/CYOA.jpg";
 
 
 function Carrousel() {

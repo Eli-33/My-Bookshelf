@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import jwt_decode from 'jwt-decode';
 import Sidebar from "../../Sidebar/Sidebar";
 import SearchBooks from "../../DasboardNewsCard/SearchBooks"
+import { lightGreen } from "@material-ui/core/colors";
 
 
 class DashBoard extends Component {
@@ -27,7 +28,7 @@ class DashBoard extends Component {
     
     render() {
         return (
-            <div className="container-fluid pl-0">
+            <div className="container-fluid pl-0" style={{backgroundColor: lightGreen}}>
                     <Sidebar />
                     <div>
                         <h1>

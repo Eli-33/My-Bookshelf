@@ -17,8 +17,6 @@ import Auth from './Auth';
 class App extends Component {
     render() {
         return (
-          
-
                 <Router>
                     <div className="container-fluid pl-0 pr-0 m-0">
                         <Navbar />

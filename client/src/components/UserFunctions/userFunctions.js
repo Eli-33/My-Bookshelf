@@ -1,4 +1,5 @@
 import axios from 'axios';
+import setAuthToken from '../../utils/setAuthToken';
 
 //change port
 
@@ -25,7 +26,9 @@ export const loginUser = userData => {
     })
     .then(res => {
         localStorage.setItem('usertoken', res.data);
+        setAuthToken(res.data);
         return res.data;
+         
     })
     .catch(err => {
         console.log(err);

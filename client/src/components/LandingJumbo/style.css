@@ -1,13 +1,12 @@
-.backgroundImg {
-    background-image: url(../../assets/images/book.jpg);
-    background-size:     cover;                  
+/* .backgroundImg { */
+    /* background-image: url(../../images/book.jpg); */
+    /* background-size:     cover;                  
     background-repeat:   no-repeat;
-    background-position: relative;
+    background-position: relative; */
    
-}
+/* } */
 
-.carrousel_wrapper {
-    height: 700px;
+.carrouel_wrapper {
     overflow: hidden;
   }
   
@@ -16,22 +15,22 @@
   }
   
   .titleApp {
-    position: absolute;
-    top: 50%;
+    position:absolute;
+    top: 10%;
     left: 50%;
     width: 500px;
     height: 140px;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    border: 2px solid white;
+    border: 2px solid rgb(255, 255, 255);
   }
   
   .titleApp .wrapper {
-    border: 2px solid white;
+    border: 2px solid rgb(255, 255, 255);
     height: 121px;
     margin: 6px;
     text-align: center;
-    color: #fff;
+    color: rgb(255, 255, 255);
     font-size: 40px;
     padding: 21px 70px 0px 70px;
     text-transform: uppercase;
@@ -39,11 +38,11 @@
 
 .landingJumbo {
     width: 60%;
-    background-color: rgba(255, 255, 255, 0.507) !important;
+    background-color: rgb(11, 49, 65) !important;
 }
 
 .cardBackground{
-    background-color: rgb(253, 250, 213)!important;
+    background-color: rgb(7, 64, 78)!important;
 }
 
 

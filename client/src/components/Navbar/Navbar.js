@@ -1,15 +1,21 @@
 import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
 import "./style.css";
-import logo from '../assets/images/logo3.png'
+import logo from '../../images/logo3.png'
+import MenuIcon from '@material-ui/icons/Menu';
+
 
 class Navbar extends Component {
    
+
+  
+
     logOut(e) {
         e.preventDefault();
         localStorage.removeItem('usertoken');
         this.props.history.push('/');
     }
+   
     
     render() {
         const loginRegLink = (
@@ -49,6 +55,8 @@ class Navbar extends Component {
             </ul>
 
         )
+     
+
         return (
             <nav className='navbar navbar-expand-md'>
                  <img src={logo} alt="LOGO"/>

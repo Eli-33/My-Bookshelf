@@ -1,34 +1,10 @@
 import React from 'react';
-// import { Drawer, List, ListItem } from "@material-ui/core";
 import { Link } from 'react-router-dom';
 import Item from './Item';
 import "./style.css"
-
-// function Sidebar(props) {
-//         const { open, onClose } = props;
-//         return (
-//           <Drawer anchor="left" open={open} onClose={() => onClose(false)}>
-//             <List component="nav">
-//               <ListItem button onClick={() => console.log("Featured")}>
-//                 زمان باقیمانده تا شروع
-//               </ListItem>
-//               <ListItem button onClick={() => console.log("Venue NFO")}>
-//                 توضیحات کنسرت
-//               </ListItem>
-//               <ListItem button onClick={() => console.log("Highlights")}>
-//                 ویژه ها
-//               </ListItem>
-//               <ListItem button onClick={() => console.log("Pricing")}>
-//                 قیمت
-//               </ListItem>
-//               <ListItem button onClick={() => console.log("Location")}>
-//                 آدرس
-//               </ListItem>
-//             </List>
-//           </Drawer>
-//         );
-//       }
-
+import LocalLibraryIcon from '@material-ui/icons/LocalLibrary';
+import MenuBookIcon from '@material-ui/icons/MenuBook';
+import AssignmentIndIcon from '@material-ui/icons/AssignmentInd';
 
 function Sidebar() {
         return (
@@ -39,16 +15,17 @@ function Sidebar() {
                                         <div className="sidebar-brand-icon rotate-n-15">
                                                 <i className="far fa-user-circle" />
                                         </div>
-                                        <div></div>
+                                        <div>Lost-In-Books</div>
                                 </Link>
 
                                 {/* Divider */}
                                 <hr className="sidebar-divider" />
 
                                 {/* Nav Item - Dashboard */}
+                               
                                 <Item active={''}
                                         href={"/dashboard"}
-                                        icon={<i className="fas fa-folder-minus" />}
+                                        icon={<LocalLibraryIcon/>}
                                         text={<span>Library</span>} />
 
                                 {/* Divider */}
@@ -56,9 +33,10 @@ function Sidebar() {
 
 
                                 {/* Nav Item - Profile */}
+                                
                                 <Item active={''}
                                         href={"/profile"}
-                                        icon={<i className="fas fa-user-alt" />}
+                                        icon={<AssignmentIndIcon/>}
                                         text={<span>Profile</span>}
                                  />
 
@@ -69,7 +47,7 @@ function Sidebar() {
                                 {/* Nav Item - Roster */}
                                 <Item active={''}
                                         href={"/other"}
-                                        icon={<i className="fas fa-calendar-week" />}
+                                        icon={<MenuBookIcon/>}
                                         text={<span>My Bookshelf</span>} />
 
                                 {/* Divider */}
