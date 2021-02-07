@@ -17,7 +17,7 @@ class DashBoard extends Component {
     }
 
     componentDidMount() {
-        const token = localStorage.usertoken;
+        const token =  localStorage.getItem('userToken');
         const decoded = jwt_decode(token);
         this.setState({
             first_name: decoded.first_name,
@@ -25,7 +25,7 @@ class DashBoard extends Component {
             email: decoded.email
         })
     }
-    
+
     render() {
         return (
             <div className="container-fluid pl-0" style={{backgroundColor: lightGreen}}>
@@ -40,7 +40,7 @@ class DashBoard extends Component {
                     </div>
             </div>
         );
-    } 
+    }
 }
 
 export default DashBoard;

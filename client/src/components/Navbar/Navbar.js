@@ -6,17 +6,17 @@ import MenuIcon from '@material-ui/icons/Menu';
 
 
 class Navbar extends Component {
-   
 
-  
+
+
 
     logOut(e) {
         e.preventDefault();
-        localStorage.removeItem('usertoken');
+        localStorage.removeItem('userToken');
         this.props.history.push('/');
     }
-   
-    
+
+
     render() {
         const loginRegLink = (
             <ul className='navbar-nav list-group list-group-horizontal'>
@@ -55,13 +55,13 @@ class Navbar extends Component {
             </ul>
 
         )
-     
+
 
         return (
             <nav className='navbar navbar-expand-md'>
                  <img src={logo} alt="LOGO"/>
                 <div className='collapse navbar-collapse d-flex justify-content-end' id='navbar1'>
-                    {localStorage.usertoken ? userLink : loginRegLink}
+                    { localStorage.getItem('userToken') ? userLink : loginRegLink}
                 </div>
             </nav>
         )

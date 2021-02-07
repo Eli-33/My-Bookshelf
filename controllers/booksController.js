@@ -23,11 +23,11 @@ module.exports = {
     save: function(req, res) {
       console.log('SAVE METHOD REQ BODY: ', req.body)
       db.GoogleBooks
-        .create(req.body)
+        .findOneAndUpdate({ id: req.body.id }, req.body, { upsert: true })
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err));
-       
-    }, 
+
+    },
     remove: function(req, res) {
       console.log("REMOVE THIS ID", req.params)
       db.GoogleBooks
@@ -44,7 +44,7 @@ module.exports = {
     },
   };
 
-  
+
   // update: function(req, res) {
   //   db.Post.findOneAndUpdate({ _id: req.params.id }, req.body)
   //     .then(dbModel => res.json(dbModel))

@@ -8,10 +8,27 @@
 
 .carrouel_wrapper {
     overflow: hidden;
+   
   }
   
-  .carrousel_image {
+  .carrouel_image1 {
+    background-image: url(../../images/book-background-thumbnail.jpg);
+    height: 700px;
     background-size: cover !important;
+    background-position: relative;
+  }
+  .carrouel_image2 {
+    background-image: url(../../images/Creative_Wallpaper_Stack_of_books_on_the_bench_082401_.jpg);
+    height: 700px;
+    background-size: cover !important;
+    background-position: relative;
+  }
+  .carrouel_image3 {
+    background-image: url(../../images/book.jpg);
+    height: 700px;
+    
+    background-size: cover !important;
+    background-position: relative;
   }
   
   .titleApp {
@@ -38,7 +55,7 @@
 
 .landingJumbo {
     width: 60%;
-    background-color: rgb(11, 49, 65) !important;
+    background-color: rgb(255, 255, 255) !important;
 }
 
 .cardBackground{
@@ -58,27 +75,5 @@
     font-size: 3vw;
 }
 
-.fa-stack {
-    vertical-align: top;
-    color: grey
-}
 
-.facebookLogo:hover {
-    color: #4267b2 !important;
-}
 
-.twitterLogo:hover {
-    color: #1da1f2 !important;
-}
-
-.instagramLogo:hover {
-    color: #f09433; 
-}
-
-.linkedinLogo:hover {
-    color: #0073b0 !important;
-}
-
-.googleLogo:hover {
-    color: #dc5246 !important;
-}

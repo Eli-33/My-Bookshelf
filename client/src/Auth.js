@@ -3,7 +3,7 @@ import Landing from './components/pages/Landing/Landing.js'
 export default function(ComposedComponent) {
   class Authentication extends Component {
     render() {
-        if (localStorage.getItem('usertoken')) {
+        if (localStorage.getItem('userToken')) {
             return <ComposedComponent {...this.props} />
 
         } else {

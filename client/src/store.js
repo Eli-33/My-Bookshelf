@@ -5,7 +5,7 @@ import setAuthToken from './utils/setAuthToken';
 import jwt_decode from 'jwt-decode';
 
 const getToken = () => {
-  const token = localStorage.getItem('usertoken');
+  const token = localStorage.getItem('userToken');
   if (token) {
       setAuthToken(token);
       const decodedToken = jwt_decode(token);
@@ -14,7 +14,12 @@ const getToken = () => {
   return {};
 }
 const initialState = {
-  user: getToken()
+  auth: {
+    isAuthenticated: false,
+    user: getToken(),
+    loading: false
+  },
+  errors: {}
 };
 
 const middleware = [thunk];
@@ -31,5 +36,3 @@ const store = createStore(
 );
 
 export default store;
-
-

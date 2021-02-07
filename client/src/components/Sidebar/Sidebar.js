@@ -7,6 +7,10 @@ import MenuBookIcon from '@material-ui/icons/MenuBook';
 import AssignmentIndIcon from '@material-ui/icons/AssignmentInd';
 
 function Sidebar() {
+
+        const [showCategories, setShowCategories] = React.useState(false)
+
+        
         return (
                 <aside>
                         <ul className="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar">
@@ -46,10 +50,28 @@ function Sidebar() {
 
                                 {/* Nav Item - Roster */}
                                 <Item active={''}
-                                        href={"/other"}
+                                        
+                                        onClick = {()=> {
+                                          setShowCategories(!showCategories) 
+                                        }}
                                         icon={<MenuBookIcon/>}
                                         text={<span>My Bookshelf</span>} />
 
+                                        {showCategories && <>
+                                        <Item  
+                                               active={''}
+                                               href={"/other"}
+                                                text={<span>Wanna Read</span>}/>
+                                        <Item 
+                                              active={''}
+                                              href={"/"}
+                                              text={<span>Currenly Reading</span>}/>
+                                        <Item 
+                                              active={''}
+                                              href={"/"}
+                                              text={<span> Read</span>}/>
+                                        </>}
+                                
                                 {/* Divider */}
                                 <hr className="sidebar-divider d-none d-md-block" />
 

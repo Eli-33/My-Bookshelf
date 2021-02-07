@@ -1,151 +1,96 @@
 import React, { Component } from 'react';
+import { saveBook } from '../../actions/bookActions';
 // import API from "../../utils/api/api";
 
 class ResultListItem extends Component {
 
-    state= {
-         WannaRead:
-         [
-            {
-                 mounted:false,
-                 bgColor:"",
-                 color:"",
-                 text:"Wanna Read"
-            }
-         ],
-        currentlyReading:
-        [
-            {
-                 mounted:false,
-                 bgColor:"",
-                 color:"",
-                 text:"Currently Reading"
-            }
-         ],
-        Read:
-        [
-            {
-                 mounted:false,
-                 bgColor:"",
-                 color:"",
-                 text:"Read"
-            }
-         ],
+    state = {
+         WannaRead: {
+            saved: false,
+            bgColor: "blue",
+            color: "white",
+            text:"Wanna Read"
+        },
+        CurrentlyReading: {
+            saved: false,
+            bgColor: "blue",
+            color: "white",
+            text:"Currently Reading"
+        },
+        Read: {
+            saved: false,
+            bgColor: "blue",
+            color: "white",
+            text:"Read"
+        }
     }
-    
-    componentDidMount = () => {
-        this.setState.WannaRead({
-            mounted: true
+
+    updateWantToRead = () => {
+        this.setState({
+            WannaRead: {
+                saved: true,
+                bgColor: "#00E000",
+                color: "white",
+                text: "Saved"
+            }
         })
         console.log("Mounted!")
     }
 
-    componentDidMount = () => {
-        this.setState.currentlyReading({
-            mounted: true
-        })
-        console.log("Mounted!")
-    }
-    
-    componentDidMount = () => {
-        this.setState.Read({
-            mounted: true
+    updateCurrentlyReading = () => {
+        this.setState({
+            CurrentlyReading: {
+                saved: true,
+                bgColor: "#00E000",
+                color: "white",
+                text: "Saved"
+            }
         })
         console.log("Mounted!")
     }
 
-    getStyleWant = () => {
-        if (this.state.WannaRead.text === "Wanna Read") {
-            this.setState.WannaRead({
+    updateRead = () => {
+        this.setState({
+            Read: {
+                saved: true,
                 bgColor: "#00E000",
                 color: "white",
                 text: "Saved"
-            })
-        }
-        else {
-            this.setState.WannaRead({
-                bgColor: "",
-                color: "",
-                text: "Save"
-            })
-        }   
-    }
-    
-    getStyleCurren = () => {
-        if (this.state.currentlyReading.text === "Currently Reading") {
-            this.setState.currentlyReading({
-                bgColor: "#00E000",
-                color: "white",
-                text: "Saved"
-            })
-        }
-        else {
-            this.setState.currentlyReading({
-                bgColor: "",
-                color: "",
-                text: "Save"
-            })
-        }   
-    }
-    
-    getStyleRead = () => {
-        if (this.state.Read.text === "Read") {
-            this.setState.Read({
-                bgColor: "#00E000",
-                color: "white",
-                text: "Saved"
-            })
-        }
-        else {
-            this.setState.Read({
-                bgColor: "",
-                color: "",
-                text: "Save"
-            })
-        }   
+            }
+        })
+        console.log("Mounted!")
     }
 
 
 
     onClickFuncWant = () => {
-        this.props.WantToRead(this.props)//.bind(this, this.props);
-        this.getStyleWant();
-    }
-    onClickFuncCurrent = () => {
-        this.props.CurrentlyReading(this.props)//.bind(this, this.props);
-        this.getStyleCurren();
-    }
-    onClickFuncRead = () => {
-        this.props.WantToRead(this.props)//.bind(this, this.props);
-        this.props.Read();
+        if (!this.state.WannaRead.saved) {
+            saveBook(this.props, 'WannaRead').then(() => {
+                this.updateWantToRead()
+            })
+        }
+
     }
 
-    // getStyle = (id) => {
-    //     let style = {
-    //         backgroundColor: "#00E000",
-    //         color: "white"   
-    //     }
-    //     if (this.state.mounted) {
-    //         console.log("Here's the id", id)
-    //         API.getBook(id)
-    //         .then(res => {
-    //             console.log("Here's the res", res);
-    //             if (res.data.id === id) {
-    //                 console.log("There's a match!");
-    //                 console.log(style);
-    //                 return style
-    //             }
-    //         })
-    //         .catch(err => {
-    //             console.log(err)
-    //         })
-    //     }
-    // }
-    
-    
+    onClickFuncCurrent = () => {
+        if (!this.state.CurrentlyReading.saved) {
+            saveBook(this.props, 'CurrentlyReading').then(() => {
+                this.updateCurrentlyReading()
+            })
+        }
+    }
+
+    onClickFuncRead = () => {
+        if (!this.state.Read.saved) {
+            saveBook(this.props, 'Read').then(() => {
+                this.updateRead()
+            })
+        }
+    }
+
+
     render () {
-        
-        // const {book} = this.props
+
 
         return (
 
@@ -157,21 +102,19 @@ class ResultListItem extends Component {
                         <h5 className="card-title" style={{margin: "10px 0"}}>{this.props.title}</h5>
                         <p className="card-text" >{this.props.description}</p>
                         <p style={{fontStyle: "italic"}}>Author(s): {this.props.authors}</p>
-                        <a href={this.props.link} target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{marginRight: "6px"}}>View Book</a>
+                        <a href={this.props.link} target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ marginRight: "6px" }}>View Book</a>
+
                         <button onClick={this.onClickFuncWant} style={{ backgroundColor: this.state.WannaRead.bgColor, color: this.state.WannaRead.color }} className="btn">{this.state.WannaRead.text}</button>
-                        <button onClick={this.onClickFuncCurrent} style={{ backgroundColor: this.state.currentlyReading.bgColor, color: this.state.currentlyReading.color }} className="btn">{this.state.currentlyReading.text}</button>
+
+                        <button onClick={this.onClickFuncCurrent} style={{ backgroundColor: this.state.CurrentlyReading.bgColor, color: this.state.CurrentlyReading.color }} className="btn">{this.state.CurrentlyReading.text}</button>
+
                         <button onClick={this.onClickFuncRead} style={{ backgroundColor: this.state.Read.bgColor, color: this.state.Read.color }} className="btn">{this.state.Read.text}</button>
                    </div>
                 </div>
             </div>
         )
     }
-    
+
 }
 
 export default ResultListItem;
-
-
-
-
-

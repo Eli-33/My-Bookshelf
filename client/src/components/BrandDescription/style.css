@@ -5,7 +5,7 @@
   
   .cn_item {
     width: 50%;
-    color: #9d57a8;
+    color: rgb(252, 229, 223);
     text-align: center;
   }
   
@@ -24,7 +24,7 @@
   }
   
   .cn_item .cn_inner:hover {
-    background:  #26a780;
+    background:  #205552;
   }
   
   .cn_item .cn_icon_square {

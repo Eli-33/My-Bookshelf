@@ -25,10 +25,10 @@ export const loginUser = userData => {
         password: userData.password
     })
     .then(res => {
-        localStorage.setItem('usertoken', res.data);
+        localStorage.setItem('userToken', res.data);
         setAuthToken(res.data);
         return res.data;
-         
+
     })
     .catch(err => {
         console.log(err);
@@ -41,7 +41,7 @@ export const getUsers = userData => {
     })
     .then(response => {
         // console.log(response.data);
-        // console.log(userData);  
+        // console.log(userData);
         return response.data
     })
     .catch(err => {
