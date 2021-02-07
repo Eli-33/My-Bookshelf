@@ -5,7 +5,6 @@ import {Input, SubmitBtn} from '../../components/Search/Search';
 import API from '../../utils/api/api';
 import ResultList from "../../components/ResultList/ResultList";
 import { Col, Container } from "../../components/Grid/Grid";
-import jwt_decode from 'jwt-decode';
 // import "./style.css"
 
 
@@ -43,63 +42,6 @@ handleFormSubmit = event => {
   this.searchBooks();
 };
 
-WantToRead = currentBook => {
-  console.log("This is the current book", currentBook);
-        const token = localStorage.usertoken;
-        const decoded = jwt_decode(token);
-        console.log(decoded);
-  API.saveBook({
-      id: currentBook.id,
-      title: currentBook.title,
-      authors: currentBook.authors,
-      description: currentBook.description,
-      image: currentBook.image,
-      link: currentBook.link,
-      status: this.props.WantToRead,
-      userId: decoded._id ,
-  })
-  .then(res => console.log("Successful POST to DB!", res))
-  .catch(err => console.log("this is the error", err));
-}
-
-CurrentlyReading = currentBook => {
-  console.log("This is the current book", currentBook);
-        const token = localStorage.usertoken;
-        const decoded = jwt_decode(token);
-        console.log(decoded);
-  API.saveBook({
-      id: currentBook.id,
-      title: currentBook.title,
-      authors: currentBook.authors,
-      description: currentBook.description,
-      image: currentBook.image,
-      link: currentBook.link,
-      status: this.props.CurrentlyReading,
-      userId: decoded._id ,
-  })
-  .then(res => console.log("Successful POST to DB!", res))
-  .catch(err => console.log("this is the error", err));
-}
-
-Read = currentBook => {
-  console.log("This is the current book", currentBook);
-        const token = localStorage.usertoken;
-        const decoded = jwt_decode(token);
-        console.log(decoded);
-  API.saveBook({
-      id: currentBook.id,
-      title: currentBook.title,
-      authors: currentBook.authors,
-      description: currentBook.description,
-      image: currentBook.image,
-      link: currentBook.link,
-      status: this.props.Read,
-      userId: decoded._id ,
-  })
-  .then(res => console.log("Successful POST to DB!", res))
-  .catch(err => console.log("this is the error", err));
-}
-
 render() {
         return (
          <> 
@@ -119,11 +61,7 @@ render() {
                 
                 {this.state.books.length ? (
                     <ResultList 
-                    bookState={this.state.books}
-                    WantToRead={this.WantToRead}
-                    CurrentlyReading={this.CurrentlyReading} 
-                    Read={this.Read}> 
-                    </ResultList>
+                    bookState={this.state.books}/>
                 ) :
                  (
                     <div>
