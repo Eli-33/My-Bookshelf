@@ -6,10 +6,10 @@ import Register from "./components/Register/register";
 import Login from "./components/Login/login";
 import Dashboard from "./components/pages/Dashboard/Dashboard";
 import Other from "./components/pages/Other/Other";
+import CurrentlyReading from "./components/pages/CurrentlyReading/CurrentlyReading";
+import Read from "./components/pages/Read/Read";
 import Profile from "./components/Profile/profile";
-
 import "./App.css";
-
 import StartUp from './components/pages/StartUp/startUp';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Auth from './Auth';
@@ -27,12 +27,14 @@ class App extends Component {
                         <Route exact path="/profile" component={Profile} />
                         <Route exact path="/dashboard" component={Auth(Dashboard)} />
                         <Route exact path="/other" component={Other} />
+                        <Route exact path="/CurrentlyReading" component={CurrentlyReading} />
+                        <Route exact path="/Read" component={Read} />
                         <Route exact path="/startUp" component={StartUp} />
                     </div>
                 </div>
             </Router>
 
-        );
+        );   
     }
 }
 export default App;

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { saveBook } from '../../actions/bookActions';
+// import Link from 'react-router-dom'
 // import API from "../../utils/api/api";
 
 class ResultListItem extends Component {
@@ -66,15 +67,15 @@ class ResultListItem extends Component {
     onClickFuncWant = () => {
         if (!this.state.WannaRead.saved) {
             saveBook(this.props, 'WannaRead').then(() => {
-                this.updateWantToRead()
+                this.updateWantToRead() 
             })
         }
-
+        
     }
 
     onClickFuncCurrent = () => {
         if (!this.state.CurrentlyReading.saved) {
-            saveBook(this.props, 'CurrentlyReading').then(() => {
+            saveBook(this.props, 'CurrentlyReading').then((res) => {
                 this.updateCurrentlyReading()
             })
         }
@@ -104,11 +105,28 @@ class ResultListItem extends Component {
                         <p style={{fontStyle: "italic"}}>Author(s): {this.props.authors}</p>
                         <a href={this.props.link} target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ marginRight: "6px" }}>View Book</a>
 
-                        <button onClick={this.onClickFuncWant} style={{ backgroundColor: this.state.WannaRead.bgColor, color: this.state.WannaRead.color }} className="btn">{this.state.WannaRead.text}</button>
+                           {/* WannaRead Btn */}
+                        <button 
+                        onClick={this.onClickFuncWant} 
+                        style={{ backgroundColor: this.state.WannaRead.bgColor, color: this.state.WannaRead.color }} 
+                        className="btn">
+                            {this.state.WannaRead.text}
+                        </button>
 
-                        <button onClick={this.onClickFuncCurrent} style={{ backgroundColor: this.state.CurrentlyReading.bgColor, color: this.state.CurrentlyReading.color }} className="btn">{this.state.CurrentlyReading.text}</button>
-
-                        <button onClick={this.onClickFuncRead} style={{ backgroundColor: this.state.Read.bgColor, color: this.state.Read.color }} className="btn">{this.state.Read.text}</button>
+                            {/* CurrentlyReading Btn */}
+                        <button 
+                        onClick={this.onClickFuncCurrent} 
+                        style={{ backgroundColor: this.state.CurrentlyReading.bgColor, color: this.state.CurrentlyReading.color }} 
+                        className="btn">
+                            {this.state.CurrentlyReading.text}
+                        </button>
+             
+                            {/* Read Btn */}
+                        <button onClick={this.onClickFuncRead} 
+                        style={{ backgroundColor: this.state.Read.bgColor, color: this.state.Read.color }} 
+                        className="btn">
+                            {this.state.Read.text}
+                        </button>
                    </div>
                 </div>
             </div>

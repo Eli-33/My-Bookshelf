@@ -61,14 +61,14 @@ function Sidebar() {
                                         <Item  
                                                active={''}
                                                href={"/other"}
-                                                text={<span>Wanna Read</span>}/>
+                                               text={<span>Wanna Read</span>}/>
                                         <Item 
                                               active={''}
-                                              href={"/"}
+                                              href={"/CurrentlyReading"}
                                               text={<span>Currenly Reading</span>}/>
                                         <Item 
                                               active={''}
-                                              href={"/"}
+                                              href={"/Read"}
                                               text={<span> Read</span>}/>
                                         </>}
                                 

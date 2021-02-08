@@ -3,12 +3,12 @@ const router = express.Router();
 const bcrypt = require("bcryptjs");
 const cors = require('cors');
 const jwt = require("jsonwebtoken");
-const keys = require("../../config/keys");
-const passport = require("passport");
+// const keys = require("../../config/keys");
+// const passport = require("passport");
 
 // Load input validation
 const validateRegisterInput = require("../../validation/register");
-const validateLoginInput = require("../../validation/login");
+// const validateLoginInput = require("../../validation/login");
 
 // Load User model
 const User = require("../../models/User");

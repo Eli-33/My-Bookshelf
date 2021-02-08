@@ -19,8 +19,8 @@ class BrandDescription extends Component {
                                         <div className="cn_icon"></div>
                                         <div className="cn_title">Contact Me!</div>
                                         <div className="cn_desc">
-                                        <GitHubIcon/>
-                                         <a href="https://github.com/Eli-33"/>
+                                        <GitHubIcon to="https://github.com/Eli-33"/>
+                                         
                                        <LinkedInIcon/>
                                        <a href="https://www.linkedin.com/in/elahe-jamshidi-araghi-a155aa99/"/>
                                         </div>
