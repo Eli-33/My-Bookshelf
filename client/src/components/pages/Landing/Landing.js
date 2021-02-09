@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import Carrousel from "../../LandingJumbo/LandingJumbo";
 import BrandDescription from "../../BrandDescription/BrandDescription"
 
-
-
 class Landing extends Component {
     render() {
         return (

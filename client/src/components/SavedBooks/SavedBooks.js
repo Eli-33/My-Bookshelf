@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import { Container } from "../../components/Grid/Grid";
-
-// import Jumbotron from "../components/Jumbotron/Jumbotron";
 import API from '../../utils/api/api';
 import SavedList from "../../components/SavedList/SavedList";
 
@@ -12,7 +10,8 @@ class Saved extends Component {
     }
 
     componentDidMount = () => {
-        this.getBooks()
+        console.log("state is ", this.props.status);
+        this.getBooks(this.props.status)
     }
 
     deleteGoogleBook = currentBook => {
@@ -26,8 +25,8 @@ class Saved extends Component {
         })
     }
 
-    getBooks = () => {
-        API.getBooks()
+    getBooks = (bookStatus) => {
+        API.getBooks(bookStatus)
         .then(res => {
             this.setState({
                 savedBooks: res.data

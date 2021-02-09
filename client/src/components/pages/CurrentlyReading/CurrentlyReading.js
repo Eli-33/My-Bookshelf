@@ -9,7 +9,7 @@ class CurrentlyReading extends Component {
             <div className="container-fluid h-100 p-0 m-0">
                 <Sidebar />
                 <div className="content">
-                <SavedBooks/>
+                <SavedBooks status="CurrentlyReading"/>
                 </div>
             </div>
         );

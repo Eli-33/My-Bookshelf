@@ -11,8 +11,12 @@ export default {
             return axios.post("/api/books", bookData);
         },
         // Gets saved books from DB
-        getBooks: function() {
-            return axios.get("/api/books");
+        getBooks: function(bookState) {
+            var URL = "/api/books"
+            if(bookState){
+                URL="/api/books?state=" + bookState 
+            }
+            return axios.get(URL);
         },
         // Gets book with the given ID
         getBook: function(id) {
