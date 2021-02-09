@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import { saveBook } from '../../actions/bookActions';
+<<<<<<< HEAD
 // import Link from 'react-router-dom'
+=======
+>>>>>>> 9f0aa25d197ddc81443ca3fa7ca5df99802a9a44
 // import API from "../../utils/api/api";
 
 
+<<<<<<< HEAD
 class ResultListItem extends Component {
 
     state = {
@@ -25,8 +29,93 @@ class ResultListItem extends Component {
             color: "white",
             text:"Read"
         }
+=======
+    state = {
+        WannaRead: {
+           saved: false,
+           bgColor: "blue",
+           color: "white",
+           text:"Wanna Read"
+       },
+       CurrentlyReading: {
+           saved: false,
+           bgColor: "blue",
+           color: "white",
+           text:"Currently Reading"
+       },
+       Read: {
+           saved: false,
+           bgColor: "blue",
+           color: "white",
+           text:"Read"
+       }
+   }
+    
+   updateWantToRead = () => {
+    this.setState({
+        WannaRead: {
+            saved: true,
+            bgColor: "#00E000",
+            color: "white",
+            text: "Saved"
+        }
+    })
+    console.log("Mounted!")
+}
+
+updateCurrentlyReading = () => {
+    this.setState({
+        CurrentlyReading: {
+            saved: true,
+            bgColor: "#00E000",
+            color: "white",
+            text: "Saved"
+        }
+    })
+    console.log("Mounted!")
+}
+
+updateRead = () => {
+    this.setState({
+        Read: {
+            saved: true,
+            bgColor: "#00E000",
+            color: "white",
+            text: "Saved"
+        }
+    })
+    console.log("Mounted!")
+}
+
+
+
+onClickFuncWant = () => {
+    if (!this.state.WannaRead.saved) {
+        saveBook(this.props, 'WannaRead').then(() => {
+            this.updateWantToRead()
+        })
     }
 
+}
+
+onClickFuncCurrent = () => {
+    if (!this.state.CurrentlyReading.saved) {
+        saveBook(this.props, 'CurrentlyReading').then(() => {
+            this.updateCurrentlyReading()
+        })
+    }
+}
+
+onClickFuncRead = () => {
+    if (!this.state.Read.saved) {
+        saveBook(this.props, 'Read').then(() => {
+            this.updateRead()
+        })
+>>>>>>> 9f0aa25d197ddc81443ca3fa7ca5df99802a9a44
+    }
+}
+
+<<<<<<< HEAD
     updateWantToRead = () => {
         this.setState({
             WannaRead: {
@@ -62,9 +151,13 @@ class ResultListItem extends Component {
         })
         console.log("Mounted!")
     }
+=======
+>>>>>>> 9f0aa25d197ddc81443ca3fa7ca5df99802a9a44
+
+render () {
 
 
-
+<<<<<<< HEAD
     onClickFuncWant = () => {
         if (!this.state.WannaRead.saved) {
             saveBook(this.props, 'WannaRead').then(() => {
@@ -133,6 +226,30 @@ class ResultListItem extends Component {
             </div>
         )
     }
+=======
+    return (
+
+        <div>
+            <div className="card">
+                <div className="card-header"></div>
+                <div className="card-body">
+                    <img src={this.props.image} style={{maxWidth: "100px"}} alt="book"/>
+                    <h5 className="card-title" style={{margin: "10px 0"}}>{this.props.title}</h5>
+                    <p className="card-text" >{this.props.description}</p>
+                    <p style={{fontStyle: "italic"}}>Author(s): {this.props.authors}</p>
+                    <a href={this.props.link} target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ marginRight: "6px" }}>View Book</a>
+
+                    <button onClick={this.onClickFuncWant} style={{ backgroundColor: this.state.WannaRead.bgColor, color: this.state.WannaRead.color }} className="btn">{this.state.WannaRead.text}</button>
+
+                    <button onClick={this.onClickFuncCurrent} style={{ backgroundColor: this.state.CurrentlyReading.bgColor, color: this.state.CurrentlyReading.color }} className="btn">{this.state.CurrentlyReading.text}</button>
+
+                    <button onClick={this.onClickFuncRead} style={{ backgroundColor: this.state.Read.bgColor, color: this.state.Read.color }} className="btn">{this.state.Read.text}</button>
+               </div>
+            </div>
+        </div>
+    )
+}
+>>>>>>> 9f0aa25d197ddc81443ca3fa7ca5df99802a9a44
 
 }
 
