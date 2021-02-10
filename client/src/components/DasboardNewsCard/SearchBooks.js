@@ -42,10 +42,6 @@ handleFormSubmit = event => {
   this.searchBooks();
 };
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 9f0aa25d197ddc81443ca3fa7ca5df99802a9a44
 render() {
         return (
          <>
@@ -64,12 +60,7 @@ render() {
                 </form>
 
                 {this.state.books.length ? (
-<<<<<<< HEAD
                     <ResultList bookState={this.state.books} />
-=======
-                    <ResultList 
-                    bookState={this.state.books}/>
->>>>>>> 9f0aa25d197ddc81443ca3fa7ca5df99802a9a44
                 ) :
                  (
                     <div>
