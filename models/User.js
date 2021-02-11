@@ -29,7 +29,6 @@ const UserSchema = new Schema({
 
 });
 
-// when we query a user, we'll also get another field called `bookCount` with the number of saved books we have
 UserSchema.virtual('bookCount').get(function () {
   return this.books.length;
 });

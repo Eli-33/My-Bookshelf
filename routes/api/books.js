@@ -11,13 +11,9 @@ router.route("/")
 router.route("/:id")
   .get(booksController.findOne)
   .delete(booksController.remove)
-  .put(booksController.updatestatus);  /// ide in the req.params and the stauts in the req.body.status
+  .put(booksController.updatestatus);  
+  
+  /// ide in the req.params and the stauts in the req.body.status
 
-
-
-
-  // for edit
-  // router.route("/api/other/:id/status")
-  // .put(booksController.setStatus)
 
 module.exports = router;

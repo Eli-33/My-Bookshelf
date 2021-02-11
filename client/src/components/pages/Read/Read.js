@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Sidebar from "../../Sidebar/Sidebar"
 import SavedBooks from "../../SavedBooks/SavedBooks"
 
-// import "./style.css"
 
 class Read extends Component {
     render() {

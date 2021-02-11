@@ -1,6 +1,7 @@
 import React from 'react';
 
 function ResultListItem(props) {
+
     const {title, authors, image, link, description, deleteGoogleBook} = props
     return (
         <div>

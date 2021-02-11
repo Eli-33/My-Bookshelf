@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { saveBook } from '../../actions/bookActions';
-// import Link from 'react-router-dom'
-// import API from "../../utils/api/api";
+import './style.css';
+
 
 
 class ResultListItem extends Component {

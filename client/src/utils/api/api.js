@@ -26,5 +26,22 @@ export default {
         deleteBook: function(id) {
             console.log("delete this id: ", id)
             return axios.delete("/api/books/" + id);
-        }
+        },
+// **************************************************************
+        saveNote: function(noteData) {
+            console.log({noteData});
+            return axios.post("/api/Blog", noteData);
+        },
+        getNotes: function() {
+            return axios.get("/Blog/all");
+        },
+         // Gets note with the given ID
+        getNote: function(id) {
+            return axios.get("/Blog/find/:id" + id);
+        },
+        // Deletes book with the given ID
+        deleteNote: function(id) {
+            console.log("delete this id: ", id)
+            return axios.delete("/Blog/delete/:id" + id);
+        },
   };

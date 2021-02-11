@@ -71,6 +71,14 @@ function Sidebar() {
                                               href={"/Read"}
                                               text={<span> Read</span>}/>
                                         </>}
+                                        {/* Divider */}
+                                     <hr className="sidebar-divider d-none d-md-block" />   
+
+                                        <Item active={''}
+                                        href={"/Blog"}
+                                        // icon={<AssignmentIndIcon/>}
+                                        text={<span>My Blog</span>}
+                                 />
                                 
                                 {/* Divider */}
                                 <hr className="sidebar-divider d-none d-md-block" />
