@@ -1,19 +1,26 @@
 aside
 {
-    background-color:   rgb(46, 187, 180);
-    position: absolute;
+    background-color: #c5678e;
+    position:inherit;
     height: 100%;
-    width: 150px;
-    top: 87px;
+    width: 200px;
+    top: 70px;
     left: 1px;
-    border: 1px solid rgb(251, 255, 2);
+    border: 1px solid rgb(182, 182, 182);
 }
 
 .sidebar {
-    background-color:  rgb(46, 187, 180);
+    color: rgb(252, 227, 215);
+    background-color: #c5678e;
+    font-family: 'Benne', serif;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'EB Garamond', serif;
 }
 
 .sidebar-brand-text{
-        color: #f5f5f0 !important;
+        color: #ffffff !important;
         text-align: center;
+    }
+    .sidebar-brand-icon{
+color: black;
     }

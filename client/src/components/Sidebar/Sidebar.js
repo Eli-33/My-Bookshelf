@@ -5,13 +5,16 @@ import "./style.css"
 import LocalLibraryIcon from '@material-ui/icons/LocalLibrary';
 import MenuBookIcon from '@material-ui/icons/MenuBook';
 import AssignmentIndIcon from '@material-ui/icons/AssignmentInd';
+import CommentIcon from '@material-ui/icons/Comment';
+import { Drawer } from "@material-ui/core";
 
-function Sidebar() {
+
+function Sidebar(props) {
 
         const [showCategories, setShowCategories] = React.useState(false)
-
         
         return (
+                <Drawer anchor="left" open={props.open} onClose={props.onClose}>
                 <aside>
                         <ul className="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar">
 
@@ -19,7 +22,7 @@ function Sidebar() {
                                         <div className="sidebar-brand-icon rotate-n-15">
                                                 <i className="far fa-user-circle" />
                                         </div>
-                                        <div>Lost-In-Books</div>
+                                        {/* <div>Lost-In-Books</div> */}
                                 </Link>
 
                                 {/* Divider */}
@@ -48,7 +51,7 @@ function Sidebar() {
                                 <hr className="sidebar-divider d-none d-md-block" />
 
 
-                                {/* Nav Item - Roster */}
+                                {/* Nav Item  */}
                                 <Item active={''}
                                         
                                         onClick = {()=> {
@@ -76,7 +79,7 @@ function Sidebar() {
 
                                         <Item active={''}
                                         href={"/Blog"}
-                                        // icon={<AssignmentIndIcon/>}
+                                        icon={<CommentIcon/>}
                                         text={<span>My Blog</span>}
                                  />
                                 
@@ -86,7 +89,7 @@ function Sidebar() {
 
                         </ul>
                 </aside>
-
+         </Drawer>
         );
 }
 export default Sidebar;

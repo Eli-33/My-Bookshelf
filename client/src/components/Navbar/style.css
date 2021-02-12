@@ -1,18 +1,20 @@
 .navbar {
-    background-color: rgb(46, 187, 180);
+    background-color: rgb(122, 24, 24);
+
 }
 
 .btn {
-    background-color:  rgba(39, 122, 104, 0.521) !important;
+    background-color:  rgb(190, 76, 76) !important;
     color: #ececec !important;
+    font-family: 'Benne', serif;
+font-family: 'Dancing Script', cursive;
+font-family: 'EB Garamond', serif;
 }
 
 img{
-    width: 70px;
-    
+    width: 50px;
+  
 }
-
-
 
 /* .controlBtn {
     background-color: #001f3f;
@@ -27,16 +29,17 @@ img{
 } */
 
 .nav-link{
-    color: #743764 !important;
+    color: #e0d0d0 !important;
     text-align: center;
+    text-shadow: rgb(0, 0, 0);
 }
 
-/* .nav-item:hover {
-    background-color: #001f3f;
-    text-decoration: none;
+.nav-item:hover {
+    background-color: #fca5a5;
+    /* text-decoration: none;
     padding: 5px 1px 5px 1px;
-    width: 100px;
-} */
+    width: 100px; */
+}
 
 /* .nav-link:hover {
     background-color: #777777;

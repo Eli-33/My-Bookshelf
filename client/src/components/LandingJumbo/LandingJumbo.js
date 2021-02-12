@@ -15,7 +15,7 @@ function Carrousel() {
     return (
       <div
         className="carrouel_wrapper"
-        style={{ height: `1000px`, overflow: "hidden" }}
+        style={{ height: `700px`, overflow: "hidden" }}
       >
         <Slider {...settings}>
           <div>

@@ -14,10 +14,11 @@ const initialBtn = {
       case CURRENTLY_READING:
         return {
           ...state,
-          loading: true
+        
         };
         case READ:
             return{
+              ...state,
 
             };
       default:

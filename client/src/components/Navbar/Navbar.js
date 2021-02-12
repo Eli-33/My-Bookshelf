@@ -2,13 +2,20 @@ import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
 import "./style.css";
 import logo from '../../images/logo3.png'
-// import MenuIcon from '@material-ui/icons/Menu';
-
+import MenuIcon from '@material-ui/icons/Menu';
+import { IconButton } from "@material-ui/core";
+// import { useState } from "react";
+import Sidebar from "../Sidebar/Sidebar";
 
 class Navbar extends Component {
 
-
-
+    constructor(props) {
+        super(props);
+        this.state = {
+          drawerOpen:false
+        }
+        this.toggleDrawer = this.toggleDrawer.bind(this);
+      }
 
     logOut(e) {
         e.preventDefault();
@@ -16,8 +23,13 @@ class Navbar extends Component {
         this.props.history.push('/');
     }
 
-
+    toggleDrawer(){
+        console.log("click" , this.state);
+        
+        this.setState({drawerOpen:!this.state.drawerOpen})
+    }
     render() {
+
         const loginRegLink = (
             <ul className='navbar-nav list-group list-group-horizontal'>
                 <li>
@@ -60,6 +72,14 @@ class Navbar extends Component {
         return (
             <nav className='navbar navbar-expand-md'>
                  <img src={logo} alt="LOGO"/>
+                 <IconButton
+                    aria-label="Menu"
+                    color="inherit"
+                    onClick={() => this.toggleDrawer(true)}
+                 >
+                 <MenuIcon />
+                </IconButton>
+                <Sidebar open={this.state.drawerOpen} onClose={this.toggleDrawer}/>
                 <div className='collapse navbar-collapse d-flex justify-content-end' id='navbar1'>
                     { localStorage.getItem('userToken') ? userLink : loginRegLink}
                 </div>

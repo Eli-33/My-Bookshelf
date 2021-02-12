@@ -1,7 +1,9 @@
 .cn_wrapper {
-    display: flex;
-    padding: 170px 0px;
+    display:flex;
+    padding: 50px 0px;
+    
   }
+ 
   
   .cn_item {
     width: 50%;
@@ -10,7 +12,7 @@
   }
   
   .cn_item .cn_outer {
-    width: 300px;
+    width: 500px;
     border: 2px solid #84ffda;
     margin: auto;
     padding: 5px;
@@ -24,7 +26,7 @@
   }
   
   .cn_item .cn_inner:hover {
-    background:  #205552;
+    background:  #368b87;
   }
   
   .cn_item .cn_icon_square {
@@ -37,25 +39,31 @@
     top: -54px;
     left: 100px;
   }
-  
-  .cn_item .cn_icon {
+ 
+  .cn_item .cn_icon{
     width: 50px;
     height: 50px;
     background-size: contain !important;
     background-repeat: no-repeat !important;
+    background-color: rgb(150, 204, 204);
+    border-radius: 30px;
     position: absolute;
     top: -30px;
-    left: 124px;
+    left: 210px;
   }
   
   .cn_item .cn_title {
     font-size: 28px;
+    font-family: 'Dancing Script', cursive;
     margin: 90px 0px 20px 0px;
     border-bottom: 1px solid #5d5d5d;
     padding-bottom: 10px;
   }
   
   .cn_item .cn_desc {
+    font-family: 'Benne', serif;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'EB Garamond', serif;
     font-size: 30px;
     font-weight: 300;
     margin-bottom: 90px;

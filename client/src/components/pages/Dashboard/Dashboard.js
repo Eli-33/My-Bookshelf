@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import jwt_decode from 'jwt-decode';
 import Sidebar from "../../Sidebar/Sidebar";
-import SearchBooks from "../../DasboardNewsCard/SearchBooks"
-import { lightGreen } from "@material-ui/core/colors";
+import SearchBooks from "../../DasboardNewsCard/SearchBooks";
+import { Container } from "../../Grid/Grid";
 
+import './style.css';
 
 class DashBoard extends Component {
     constructor() {
@@ -28,17 +29,18 @@ class DashBoard extends Component {
 
     render() {
         return (
-            <div className="container-fluid pl-0" style={{backgroundColor: lightGreen}}>
-                    <Sidebar />
+            
+            <Container fluid>
+                <Sidebar />
                     <div>
-                        <h1>
+                        <h1 className='nameTitle'>
                              Welcome { this.state.first_name } { this.state.last_name }
                         </h1>
                         <div className="d-flex flex-row-reverse mr-5">
                             <SearchBooks />
                         </div>
                     </div>
-            </div>
+            </Container>
         );
     }
 }

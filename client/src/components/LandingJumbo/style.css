@@ -8,7 +8,8 @@
 
 .carrouel_wrapper {
     overflow: hidden;
-   
+    background-color: #c5678e;
+
   }
   
   .carrouel_image1 {
@@ -55,7 +56,7 @@
 
 .landingJumbo {
     width: 60%;
-    background-color: rgb(255, 255, 255) !important;
+    background-color: #c5678e;
 }
 
 .cardBackground{
