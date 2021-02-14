@@ -11,6 +11,9 @@ class Profile extends Component {
             last_name: '',
             email: '',
             password: ''
+
+
+            
         }
     }
 
