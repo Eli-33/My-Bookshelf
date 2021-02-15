@@ -13,22 +13,28 @@ class BrandDescription extends Component {
             <div className="bck_black">
                 <div className="center_wrapper">
                     <div className="cn_wrapper">
-                        <Zoom duration={500} delay={500}>
-                            <div className="cn_item">
+                       <div className="row">
+                          <Col size="lg-4">
+                            <Zoom duration={500} delay={500}>
+                              <div className="cn_item">
                                 <div className="cn_outer">
                                     <div className="cn_inner">
                                         <div className="cn_icon_sqare bck_black"></div>
                                         <div className="cn_icon" style={{background:`url(${contatMeIcon})`}}></div>
                                         <div className="cn_title">Contact Me!</div>
                                         <div className="cn_desc">
-                                        <GitHubIcon to="https://github.com/Eli-33"/>
-                                         
-                                       <LinkedInIcon to="https://www.linkedin.com/in/elahe-jamshidi-araghi-a155aa99/"/>
+                                           <a href='https://github.com/Eli-33'>
+                                           <GitHubIcon style={{color: "#4DB6AC"}}/></a>
+                                           <a href='https://www.linkedin.com/in/elahe-jamshidi-araghi-a155aa99/'>
+                                           <LinkedInIcon style={{color: "#4DB6AC"}}/></a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </Zoom>
+                     </Col>  
+                      <Col size="md-4"/>
+                      <Col size="lg-4">
                         <Zoom duration={500}>
                             <div className="cn_item">
                                 <div className="cn_outer">
@@ -36,18 +42,21 @@ class BrandDescription extends Component {
                                         <div className="cn_icon_sqare bck_black"></div>
                                         <div className="cn_icon" style={{background:`url(${InfoIcon})`}}></div>
                                         <div className="cn_title">About App</div>
-                                        <div className="cn_desc">You’re in the right place. Tell us what titles you’ve enjoyed in the past,
-                                         and we’ll give you surprisingly insightful recommendations.This App let you to login and be a member
-                                         and have your own bookshelf also enjoy reading your favourite books and can save the books to read it later.
+                                        <div className="cn_desc">Do you like to read? If the answer is yes, then you’re at the right place.
+                                         The books you always wanted to read or heard about them from your friends,
+                                         search for those books and you will get surprisingly insightful recommendations.
+                                         This App let you to login, be a member
+                                         and have your own bookshelf. In your bookshelf, track the books you're reading, have read and wanna read.
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </Zoom>
+                      </Col>
                     </div>
                 </div>
             </div>
-
+        </div>
         );
     }
 }
