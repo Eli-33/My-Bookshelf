@@ -5,7 +5,7 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import "./style.css";
 import contatMeIcon from '../../images/contactIcon1.jpg';
 import InfoIcon from '../../images/infoIcon2.png';
-
+import { Col } from "../../components/Grid/Grid";
 
 class BrandDescription extends Component {
     render() {

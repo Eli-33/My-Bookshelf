@@ -22,7 +22,7 @@ function Sidebar(props) {
                                         <div className="sidebar-brand-icon rotate-n-15">
                                                 <i className="far fa-user-circle" />
                                         </div>
-                                        {/* <div>Lost-In-Books</div> */}
+                                        <div style={{color: 'white'}}>Lost-In-Books</div>
                                 </Link>
 
                                 {/* Divider */}

@@ -32,7 +32,11 @@ class Profile extends Component {
             <div className='container-fluid pl-0 m-0'>
                 <Sidebar />
                 <div className="d-flex flex-row-reverse mt-5 mr-5">
-                    <div className='col-xs-12 col-sm-12 col-md-9 jumbotron jumbotron-fluid cardBackground'>
+                    <div className='col-xs-12 col-sm-12 col-md-9 jumbotron jumbotron-fluid cardBackground'
+                    style={{
+                        backgroundColor: '#d39db5', 
+                    }}
+                    >
                         <div className='col-sm-8 mx-auto'>
                             <h1 className='text-center'>PROFILE</h1>
                         </div>

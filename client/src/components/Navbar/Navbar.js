@@ -46,20 +46,28 @@ class Navbar extends Component {
         )
         const userLink = (
             <ul className='navbar-nav list-group list-group-horizontal'>
-                <li>
+                {/* <li>
                     <Link className='btn btn-sm active mr-1 mb-1' to='/'>
                         Home
                     </Link>
-                </li>
-                <li>
+                </li> */}
+                {/* <li>
                     <Link className='btn btn-sm active mr-1 mb-1' to='/dashboard'>
                         Dashboard
                     </Link>
-                </li>
+                </li> */}
                 <li>
                     {/* <a href="/" rel='noopener noreferrer' onClick={this.logOut.bind(this)}>
                         Logout
                     </a> */}
+                     <IconButton
+                    aria-label="Menu"
+                    color="inherit"
+                    onClick={() => this.toggleDrawer(true)}
+                 >
+                 <MenuIcon />
+                </IconButton>
+                <Sidebar open={this.state.drawerOpen} onClose={this.toggleDrawer}/>
                     <button className="btn btn-sm active" id="logoutBtn" data-toggle="modal" data-target="#logoutModal" onClick={this.logOut.bind(this)}>
                         <div>Logout</div>
                     </button>
@@ -72,14 +80,6 @@ class Navbar extends Component {
         return (
             <nav className='navbar navbar-expand-md'>
                  <img src={logo} alt="LOGO"/>
-                 <IconButton
-                    aria-label="Menu"
-                    color="inherit"
-                    onClick={() => this.toggleDrawer(true)}
-                 >
-                 <MenuIcon />
-                </IconButton>
-                <Sidebar open={this.state.drawerOpen} onClose={this.toggleDrawer}/>
                 <div className='collapse navbar-collapse d-flex justify-content-end' id='navbar1'>
                     { localStorage.getItem('userToken') ? userLink : loginRegLink}
                 </div>

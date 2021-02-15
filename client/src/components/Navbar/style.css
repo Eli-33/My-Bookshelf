@@ -1,14 +1,14 @@
 .navbar {
-    background-color: rgb(122, 24, 24);
+    background:  #d39db5;
 
 }
 
 .btn {
-    background-color:  rgb(190, 76, 76) !important;
+    background-color:  rgb(62, 31, 66) !important;
     color: #ececec !important;
     font-family: 'Benne', serif;
-font-family: 'Dancing Script', cursive;
-font-family: 'EB Garamond', serif;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'EB Garamond', serif;
 }
 
 img{
@@ -29,14 +29,14 @@ img{
 } */
 
 .nav-link{
-    color: #e0d0d0 !important;
+    color: #e2c4c4 !important;
     text-align: center;
     text-shadow: rgb(0, 0, 0);
 }
 
 .nav-item:hover {
-    background-color: #fca5a5;
-    /* text-decoration: none;
+    background-color: rgb(67, 68, 68);
+        /* text-decoration: none;
     padding: 5px 1px 5px 1px;
     width: 100px; */
 }
