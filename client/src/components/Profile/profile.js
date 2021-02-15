@@ -34,7 +34,7 @@ class Profile extends Component {
                 <div className="d-flex flex-row-reverse mt-5 mr-5">
                     <div className='col-xs-12 col-sm-12 col-md-9 jumbotron jumbotron-fluid cardBackground'
                     style={{
-                        backgroundColor: '#d39db5', 
+                        backgroundColor: '#f1a4a9',
                     }}
                     >
                         <div className='col-sm-8 mx-auto'>
