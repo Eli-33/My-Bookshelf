@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { Container } from "../../components/Grid/Grid";
 import API from '../../utils/api/api';
 import SavedList from "../../components/SavedList/SavedList";
-// import { onClickFuncWant, onClickFuncCurrent, onClickFuncRead } from "../../components/ResultListItem/ResultListItem";
 
 
 class Saved extends Component {
@@ -51,9 +50,6 @@ class Saved extends Component {
                     <SavedList 
                     bookState={this.state.savedBooks}
                     deleteGoogleBook={this.deleteGoogleBook}
-                    // onClickFuncWant={this.props.onClickFuncWant}
-                    // onClickFuncCurrent={this.props.onClickFuncCurrent}
-                    // onClickFuncRead={this.props.onClickFuncRead}
                     >
                     </SavedList>
                 ) : (

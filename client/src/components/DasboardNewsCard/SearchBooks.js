@@ -1,6 +1,6 @@
 import React from "react";
 import { Component } from "react";
-import {Input, SubmitBtn} from '../../components/Search/Search';
+import {Input, SearchBtn} from '../../components/Search/Search';
 // import Jumbotron from '../../components/Jumbotron/Jumbotron';
 import API from '../../utils/api/api';
 import ResultList from "../../components/ResultList/ResultList";
@@ -45,7 +45,7 @@ handleFormSubmit = event => {
 render() {
         return (
          <>
-         <Col size="md-10">
+         <Col size="md-12">
         <Container fluid>
                 {/* <Jumbotron /> */}
                 <form>
@@ -56,7 +56,7 @@ render() {
                         name="search"
                         placeholder="e.g. Harry Potter"
                     />
-                    <SubmitBtn onClick={this.handleFormSubmit}/>
+                    <SearchBtn onClick={this.handleFormSubmit}/>
                 </form>
 
                 {this.state.books.length ? (
