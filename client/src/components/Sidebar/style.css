@@ -11,7 +11,7 @@ aside
 }
 
 .sidebar {
-    color: rgb(255, 255, 255);
+    color: rgb(66, 66, 66);
     background-color: #f1a4a9;
     font-family: 'Benne', serif;
     font-family: 'Dancing Script', cursive;
@@ -19,7 +19,7 @@ aside
 }
 
 .sidebar-brand-text{
-        color: #ffffff !important;
+        color: #0c0c0c !important;
         text-align: center;
     }
   

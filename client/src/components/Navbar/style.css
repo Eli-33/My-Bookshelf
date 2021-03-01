@@ -6,9 +6,10 @@
 .btn {
     background-color:  rgb(62, 31, 66) !important;
     color: #ececec !important;
-    font-family: 'Benne', serif;
+    font-family: "Calibri", "Georgia", "Times New Roman", Times, serif;
+    /* font-family: 'Benne', serif;
     font-family: 'Dancing Script', cursive;
-    font-family: 'EB Garamond', serif;
+    font-family: 'EB Garamond', serif; */
 }
 
 img{
