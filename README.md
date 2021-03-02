@@ -74,7 +74,7 @@ This app uses a MVC design pattern where Node and MongoDB are used to query and 
 <br>
 
 ### **Video of the app in use** 
-* A recording of the app's functionality can be viewed [here]()*.
+* A recording of the app's functionality can be viewed [here](https://github.com/Eli-33/My-Bookshelf/blob/main/screenshots/Untitled_%20Feb%2015%2C%202021%201_16%20PM.gif)*.
 <br>
 
 ### **Tools**
@@ -111,10 +111,9 @@ To see a more indepth video of the app please click [here](#Video-of-the-app-in-
 
 #### **Screenshot of application**
 #### **Landing Page** 
-![landing-page]()
-
-#### Information about Lost in books (underneath the landing page video)
-![info]()
+![landing-page](https://github.com/Eli-33/My-Bookshelf/blob/main/screenshots/landingP.PNG)
+![Library-page](https://github.com/Eli-33/My-Bookshelf/blob/main/screenshots/libraryP.PNG)
+![BookShelf-page](https://github.com/Eli-33/My-Bookshelf/blob/main/screenshots/bookshelf.PNG)
 
 <br>
 
