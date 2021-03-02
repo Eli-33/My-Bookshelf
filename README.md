@@ -9,7 +9,7 @@
 * [Link to the App](#Link-to-the-App)
 * [About this project](#About-this-project)
 * [Screenshots](#Screenshots)
-* [License](#License)
+* [License](#Licence)
 * [Issues](#Issues)
 * [Authors](#Authors)
 <br>
