@@ -100,8 +100,6 @@ This app uses a MVC design pattern where Node and MongoDB are used to query and 
   * [Bootstrap](https://getbootstrap.com/)
   * Javascript
   * [jQuery](https://jquery.com/)
-  * [day.js](https://day.js.org/en/)
-  * [fullcalendar.io](https://fullcalendar.io/) 
 <br>
 
 ## Screenshots and quick Walkthrough
@@ -125,7 +123,7 @@ To see a more indepth video of the app please click [here](#Video-of-the-app-in-
 <br>
 
 ## Issues
-If you find an issue while using the app or have a request, log the issue or request [ here](https://github.com/Epanastatis2020/book-a-tutor/issues). These will be addressed in a future code update.
+If you find an issue while using the app or have a request, log the issue or request [ here](https://github.com/Eli-33/My-Bookshelf/issues). These will be addressed in a future code update.
 <br>
 <hr>
 
