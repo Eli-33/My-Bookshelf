@@ -10,7 +10,6 @@
 * [About this project](#About-this-project)
 * [Screenshots](#Screenshots)
 * [License](#License)
-* [Acknowledgements](#Acknowledgements)
 * [Issues](#Issues)
 * [Authors](#Authors)
 <br>
