@@ -8,7 +8,6 @@
 * [User Story](#User-Story)
 * [Link to the App](#Link-to-the-App)
 * [About this project](#About-this-project)
-* [Files](#Files)
 * [Screenshots](#Screenshots)
 * [License](#License)
 * [Acknowledgements](#Acknowledgements)
@@ -102,17 +101,14 @@ This app uses a MVC design pattern where Node and MongoDB are used to query and 
   * [jQuery](https://jquery.com/)
 <br>
 
-## Screenshots and quick Walkthrough
-
-#### **Walthrough of application**
-![walkthrough-lost in books]()
-
-To see a more indepth video of the app please click [here](#Video-of-the-app-in-use) to go up to **Video of the app in use** above.
+## Screenshots
 
 #### **Screenshot of application**
 #### **Landing Page** 
 ![landing-page](https://github.com/Eli-33/My-Bookshelf/blob/main/screenshots/landingP.PNG)
+#### **Library Page** 
 ![Library-page](https://github.com/Eli-33/My-Bookshelf/blob/main/screenshots/libraryP.PNG)
+#### **BookShelf Page** 
 ![BookShelf-page](https://github.com/Eli-33/My-Bookshelf/blob/main/screenshots/bookshelf.PNG)
 
 <br>
