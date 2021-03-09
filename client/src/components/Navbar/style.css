@@ -30,13 +30,13 @@ img{
 } */
 
 .nav-link{
-    color: #e2c4c4 !important;
+    color: #474040 !important;
     text-align: center;
     text-shadow: rgb(0, 0, 0);
 }
 
 .nav-item:hover {
-    background-color: rgb(67, 68, 68);
+    background-color: rgb(118, 250, 217);
         /* text-decoration: none;
     padding: 5px 1px 5px 1px;
     width: 100px; */
